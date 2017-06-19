@@ -1,0 +1,132 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.progress-meter {
+  padding: 0;
+}
+
+ol.progress-meter {
+  padding-bottom: 9.5px;
+  list-style-type: none;
+}
+ol.progress-meter li {
+  display: inline-block;
+  text-align: center;
+  height: 36px;
+  color: #0E4C60;
+  font-weight: bold;
+  width: 9%;
+  font-size: 0.8em;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}
+ol.progress-meter li:before {
+  position: relative;
+  float: left;
+  text-indent: 0;
+  left: -webkit-calc(50% - 9.5px);
+  left: -moz-calc(50% - 9.5px);
+  left: -ms-calc(50% - 9.5px);
+  left: -o-calc(50% - 9.5px);
+  left: calc(50% - 9.5px);
+}
+ol.progress-meter li.done {
+  font-size: 0.8em;
+  text-indent: -19px;
+}
+ol.progress-meter li.done:before {
+  content: "\2713";
+  height: 19px;
+  width: 19px;
+  line-height: 21.85px;
+  bottom: -28.175px;
+  border: none;
+  border-radius: 19px;
+}
+ol.progress-meter li.todo {
+  font-size: 0.8em;
+}
+ol.progress-meter li.todo:before {
+  font-size: 17.1px;
+  bottom: -26.95px;
+  line-height: 18.05px;
+}
+ol.progress-meter li.done {
+  color: black;
+  border-bottom-color: yellowgreen;
+}
+ol.progress-meter li.done:before {
+  color: white;
+  background-color: yellowgreen;
+}
+ol.progress-meter li.todo {
+  border-bottom-color: silver;
+}
+
+ol.progress-meter li.todo a {
+  color: silver !important;
+}
+
+ol.progress-meter li.todo:before {
+  color: silver;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 614px) {
+	ol.progress-meter li {
+		font-size: 0.3em;
+	}
+	
+	ol.progress-meter li.todo {
+		font-size: 0.3em;
+	}
+	
+	ol.progress-meter li.done {
+		font-size: 0.3em;
+	}
+}
+
+@media only screen and (min-width: 615px) and (max-width: 759px) {
+	ol.progress-meter li {
+		font-size: 0.4em;
+	}
+	
+	ol.progress-meter li.todo {
+		font-size: 0.4em;
+	}
+	
+	ol.progress-meter li.done {
+		font-size: 0.4em;
+	}
+}
+
+@media only screen and (min-width: 760px) and (max-width: 979px) {
+	ol.progress-meter li {
+		font-size: 0.5em;
+	}
+	
+	ol.progress-meter li.todo {
+		font-size: 0.5em;
+	}
+	
+	ol.progress-meter li.done {
+		font-size: 0.5em;
+	}
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1200px) {
+	ol.progress-meter li {
+		font-size: 0.7em;
+	}
+	
+	ol.progress-meter li.todo {
+		font-size: 0.7em;
+	}
+	
+	ol.progress-meter li.done {
+		font-size: 0.7em;
+	}
+}

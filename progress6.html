@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point done"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point done"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point todo"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point todo"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point todo"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text"> 
+						<p>An <span class="highlighted">alternative</span> to the <span class="highlighted">while loop</span> is the <span class="highlighted">for loop</span>. Essentially, a for loop is most commonly used in a scenario where you know <span class="highlighted">how many times</span> you wish to <span class="highlighted">iterate</span> through a certain piece of code. The for loop syntax is as follows:</p>
+						
+						<p class="indent highlighted">for (<i>statement 1; statement 2; statement 3</i> ) {<br>
+							<span class="indent"><i>//piece of code to execute</i></span><br>
+						}</p>
+						
+						<p><span class="highlighted">for</span> is the <span class="highlighted">keyword</span> that tells the computer you are creating a for loop. Followed by the keyword is a <span class="highlighted">set of statements</span>. <span class="highlighted">Statement 1</span> represents the <span class="highlighted">initiation</span> of a <span class="highlighted">variable</span>. <span class="highlighted">Statement 2</span> represents the <span class="highlighted">condition</span> (similar to the while loop). <span class="highlighted">Statement 3</span> represents the <span class="highlighted">incrementation</span> of the <span class="highlighted">variable</span>. Following up on the example used in the last course, <span class="highlighted">While-loops</span>, we get the following for loop:</p>
+						
+						<p class="indent highlighted">for (var x = 0; x < 5; x++) {<br>
+							<span class="indent">i.moveRight();</span><br>
+						}</p>
+						
+						<p><b>Note 1:</b> The <span class="highlighted">variable</span> used in the <span class="highlighted">first statement</span> can be initiated <span class="highlighted">outside</span> the for loop. The for loop would then look like this:</p>
+						
+						<p class="indent highlighted">var x = 0;<br>
+						for (<i> ; statement 2; statement 3</i> ) {<br>
+							<span class="indent"><i>//piece of code to execute</i></span><br>
+						}</p>
+						
+						<p><b>Note 2:</b> The <span class="highlighted">value</span> of the variable can also be <span class="highlighted">incremented inside</span> the for loop. In that case, the for loop will look like this:</p>
+						
+						<p class="indent highlighted">for (<i>statement 1; statement 2;</i> ) {<br>
+							<span class="indent"><i>//piece of code to execute</i></span><br>
+							<span class="indent">x++;</span><br>
+						}</p>
+						
+						<p><b>Note 3:</b> You can <span class="highlighted">combine</span> both notations from Note 1 and Note 2. The final result would be:</p>
+						
+						<p class="indent highlighted">var x = 0;<br>
+						for ( ; x < 5; ) {<br>
+							<span class="indent"><i>//piece of code to execute</i></span><br>
+							<span class="indent">x++;</span><br>
+						}</p>
+						
+						<p><b>Note 4:</b> You can <span class="highlighted">prematurely stop</span> a for loop by using the <span class="highlighted">break</span> keyword:</p>
+						
+						<p class="indent highlighted">for (var x = 0; x < 5; x++) {<br>
+							<span class="indent">i.say(x);<br>
+							<span class="indent">break;<br>
+						}</p>
+						
+						<p>The example above will only <span class="highlighted">execute one iteration</span> of the for loop, after which it will <span class="highlighted">stop iterating</span>.</p>
+						
+						<p><b>Note 5:</b> It is possible to create a <span class="highlighted">for loop inside a for loop</span>. This is called a <span class="highlighted">nested loop</span>. Nested loops are used to <span class="highlighted">iterate through iterations</span>. Take a look at the following example:</p>
+						
+						<p class="indent highlighted">for (var x = 0; x < 10; x++) {<br>
+							<span class="indent">for (var y = 0; y < 10; y++) {</span><br>
+							<span class="doubleIndent">i.say("Hi!");</span><br>
+							<span class="indent">}</span><br>
+						}</p>
+						
+						<p>This example iterates through <span class="highlighted">x</span> 10 times (0-9), and iterates through <span class="highlighted">y</span> 10 times <span class="highlighted">per iteration of x</span>. As a result, <span class="highlighted">i.say("Hi!")</span> results in the i object saying "Hi!" <span class="highlighted">100 times</span>.</p>
+						
+						<p><b>Exercise:</b> Create a <span class="highlighted">nested for loop</span> using the variables <span class="highlighted">x</span> and <span class="highlighted">y</span>. Use the nested for loop and the <span class="highlighted">say()</span> action to say the <span class="highlighted">times tables of 1 through 5</span>.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Use these variables for the for loops
+var x;
+var y;
+
+// Create a nested for loop using variables x and y and use say() to say the times tables of 1-5
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(6)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Keep in mind there's three statements that need to be present in your code. Also, did you use both the variables x and y? Lastly, a times table goes from 1 to 10 (<b>Table of 1:</b> 1 x 1 = 1 ... 1 x 10 = 10).</p>
+			  </div>
+			</div>
+		
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(6)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(6)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

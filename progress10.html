@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>		
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point done"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point done"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point done"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point done"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point done"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point done"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text">
+						<p>So far we've been using <span class="highlighted">actions</span> to perform all kind of <span class="highlighted">operations</span>. Sometimes, a <span class="highlighted">sequence of actions</span> has to be repeated <span class="highlighted">multiple times</span> in a piece of code. Instead of having to type the same sequence multiple time, or keep repeating loops, you can <span class="highlighted">create a function</span>. A function has the following <span class="highlighted">syntax</span>:</p>
+						
+						<p class="indent highlighted">function <b>functionName</b> ( <i>parameter1, parameter2</i> ) { <br>
+							<span class="indent"><i>//Code that needs to be executed</i></span><br>
+						}</p>
+						
+						<p>As you can see, creating a function is not that hard. <span class="highlighted">Firstly</span>, you have to use the function <span class="highlighted">keyword</span> to tell the computer you are creating a function. <span class="highlighted">Secondly</span>, you have to come up with a <span class="highlighted">name</span> for the function. <span class="highlighted">Thirdly</span>, you can define the <span class="highlighted">parameter(s)</span>. We then use <span class="highlighted">accolades {}</span> to separate the code the function needs to execute.</p>
+
+						<p>Humans use functions, figuratively speaking, on a daily basis too. For example, if John is going to do groceries, he has to do a set of actions in order to complete his goal. Firstly, John has to go to the shop. Then, he needs to pick his groceries. Next, he has to pay for his groceries. Lastly, he will walk back home.</p>
+						
+						<p>As you can see, doing groceries requires <span class="highlighted">multiple</span> actions to complete. If we translate this to JavaScript, our groceries example would look something like this:</p>
+						
+						<p class="indent highlighted">function doGroceries () { <br>
+							<span class="indent">var supermarket = "Walmart";</span><br>
+							<span class="indent">var groceries = ["cheese", "apples", "hamburgers"];</span><br><br>
+							
+							<span class="indent">john.goTo ( supermarket );</span><br>
+							<span class="indent">john.take ( groceries );</span><br>
+							<span class="indent">john.payFor ( groceries );</span><br>
+							<span class="indent">john.goHome ();</span><br>
+						}</p>
+						
+						<p>Now it's time to learn how to <span class="highlighted">use a function</span> in your code. It's actually very easy! All you have to do is <span class="highlighted">write the name</span> of the function. This is called <span class="highlighted">calling a function</span>. It looks something like this:</p>
+						
+						<p class="indent highlighted">var example = "This is just an example"; <br>
+						doGroceries(); <br>
+						john.say("I have just done my groceries!");
+						</p>
+						
+						<p>Sometimes, you want a function to <span class="highlighted">not</span> just perform a sequence of actions, but actually give back a <span class="highlighted">response</span>. This is called <span class="highlighted">returning a value</span>. Say for example you want the computer to calculate the sum of two values, you would like the computer to return the outcome. It would look something like this:</p>
+						
+						<p class="indent highlighted">function calculateSum ( num1, num2 ) {<br>
+							<span class="indent">return (num1 + num2);</span><br>
+						}</p>
+						
+						<p>When <span class="highlighted">creating a function</span> which returns a value, you want to be able to <span class="highlighted">access</span> that value. The best way to do this is to <span class="highlighted">store</span> the returned value in a <span class="highlighted">variable</span>. Following up on the example of calculateSum:</p>
+						
+						<p class="indent highlighted">var x = calculateSum(1, 2);</p>
+						
+						<p>In the example above, <span class="highlighted">var x</span> will have stored the number <span class="highlighted">3</span>, because the function <span class="highlighted">returned</span> this value as a result of the calculation.</p>
+						
+						<p><b>Note 1:</b> It's <span class="highlighted">not mandatory</span> to create a function with parameters. Parameters are <span class="highlighted">optional</span>, and should only be defined if you plan on using them in your function.</p>
+						
+						<p><b>Note 2:</b> A function will <span class="highlighted">not be executed</span> after defining it. You have to <span class="highlighted">call the function</span> in order to execute it.</p>
+						
+						<p><b>Exercise:</b> Create and then call a function called <span class="highlighted">finishCourse</span>, which uses the array <span class="highlighted">almostThere</span> as a parameter. Inside the function, create a <span class="highlighted">for loop</span> which uses variable x to iterate through the array. Then, check if the value of the array is equal to <span class="highlighted">"You are done!"</span>. If it is, use the <span class="highlighted">say()</span> action to say: <span class="highlighted">"I am finally done!"</span> and <span class="highlighted">break</span> out of the for loop.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Use this array in your function
+var almostThere = [1, 2, 3, 4, 5 ,"You are done!", 6, 7, 8, 9, 10];
+
+// Create your function here
+
+// Call your function here
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(10)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Make sure you used the correct syntax to define your function. Also keep in mind to call the function in order to execute it.</p>
+			  </div>
+			</div>
+		
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(10)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(10)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

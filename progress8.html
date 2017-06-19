@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point done"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point done"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point done"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point done"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point todo"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text"> 
+						<p>In the course <span class="highlighted">Variables</span> we explained how variables are used to store <span class="highlighted">data values</span>. We mainly addressed the data types <span class="highlighted">Strings</span> and <span class="highlighted">numbers</span>. Besides these data types, JavaScript also has a data type called <span class="highlighted">Arrays</span>. Arrays are a special kind of data type because it is a <span class="highlighted">set of values</span>, not just a single value. The <span class="highlighted">syntax</span> of an array is as follows:</p>
+						
+						<p class="indent highlighted">var nameOfArray = [arrayValue1, arrayValue2, ...];</p>
+						
+						<p>For example, if we want to store fruit names in an array, it would look something like this:</p>
+						
+						<p class="indent highlighted">var fruit = ["banana", "apple", "orange"];</p>
+						
+						<p>Arrays are useful, because we can use them to store <span class="highlighted">multiple values</span> under <span class="highlighted">one variable name</span>. You can <span class="highlighted">access</span> the value of an array by referring to the <span class="highlighted">index number</span> of the value. The <span class="highlighted">first</span> value in an array starts at index number <span class="highlighted">0</span>. The <span class="highlighted">second</span> value is index <span class="highlighted">1</span>, the <span class="highlighted">third</span> value is index <span class="highlighted">2</span>, etc. Using this index number, we can access values by using the following <span class="highlighted">syntax</span>:</p>
+						
+						<p class="indent highlighted">var valueInArray = nameOfArray[indexNumber]</p>
+						
+						<p>Following up on the fruit example, you can access the value "apple" by using it's index:</p>
+						
+						<p class="indent highlighted">var apple = fruit[1];</p>
+						
+						<p>Arrays are commonly used in <span class="highlighted">combination</span> with <span class="highlighted">for loops</span>. This is because the <span class="highlighted">variable</span> which determines the <span class="highlighted">incrementation</span> of the for loop (for example: <span class="highlighted">var x</span>) can be <span class="highlighted">used</span> as the index number of an array. Let's do this for the fruit array as well:</p>
+						
+						<p class="indent highlighted">var fruit = ["banana", "apple", "orange"];<br>
+						for ( var x = 0; x < fruit.length; x++ ) {<br>
+						<span class="indent">john.say(fruit[x]);</span><br>
+						}</p>
+						
+						<p>The example above uses a for loop to cycle through all values of the array, and makes John say the values of fruit. Notice how the <span class="highlighted">length of the array</span> is used to define the maximum amount of iterations the for loop can make (<span class="highlighted">x < fruit.length</span>).</p>
+						
+						<p><b>Note 1:</b> You can store <span class="highlighted">different data types</span> in the same array. The following example is a properly working array:</p>
+						
+						<p class="indent highlighted">var randomValues = ["Some text", 12345];</p>
+						
+						<p><b>Note 2:</b> You can use <span class="highlighted">names</span> to access values in an array. This can be done as follows:</p>
+						
+						<p class="indent highlighted">var carArray = [brand: "BMW", wheels: 4, passengers: 4];<br>
+						var carBrand = carArray[brand];</p>
+						
+						<p>This method is an elaborate way of accessing a value in an array, but it adds extra clarity on how to access the values.</p>
+						
+						<p><b>Note 3:</b> If you want to <span class="highlighted">add new values</span> to an <span class="highlighted">existing array</span>, you can do so with the <span class="highlighted">push()</span> action:</p>
+						
+						<p class="indent highlighted">var fruit = ["banana", "apple", "orange"];<br>
+						fruit.push("lemon");<br>
+						// The new array is now ["banana", "apple", "orange", "lemon"]</p>
+						
+						<p><b>Exercise:</b> Create an array called <span class="highlighted">carBrands</span>, and <span class="highlighted">fill it</span> with the following names: "BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi". Then, use the <span class="highlighted">length</span> of the array to add "Opel" to the array.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Create array here
+
+// Add last brand to array here
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(8)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Keep in mind that an array is a variable, and thus needs the var keyword. Also, check if you used the correct syntax for your for loop.</p>
+			  </div>
+			</div>
+		
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(8)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(8)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

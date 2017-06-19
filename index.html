@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="js/cookie.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body onload="cookieObject.checkAccount();">
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div class="platform">
+			<div class="welcomeDiv">
+				<h1 id="welcome">Welcome, <span id="name"></span>!</h1>
+				<p id="message">You left off at the course: </p><b><span id="courseName"></span></b>
+				<button onclick="cookieObject.checkProgressCookie();" id="continue" type="button">Resume (<span id="percent"></span>%)</button>
+			</div>
+		</div>
+	</body>
+</html>

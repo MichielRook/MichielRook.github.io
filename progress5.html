@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point done"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point todo"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point todo"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point todo"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point todo"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text"> 
+						<p>A <span class="highlighted">while loop</span> is a construction in programming, which allows the computer to <span class="highlighted">repeat</span> a certain piece of code. Every while loop should look something like this:</p>
+						
+						<p class="indent highlighted">while (<i>condition</i>) {<br>
+							<span class="indent"><i>//piece of code to execute</i></span><br>
+							}
+						</p>
+						
+						<p><span class="highlighted">while</span> is the keyword to tell the computer you are <span class="highlighted">creating</span> a while loop. The <span class="highlighted">condition</span> determines if the while loop is executed; if the condition is <span class="highlighted">correct (true)</span>, the code will execute. However, if the condition is <span class="highlighted">not correct (false)</span>, the while loop will not start running. Keep in mind that the condition should be put between parentheses: <span class="highlighted">( )</span>.</p> 
+						
+						<p>Followed by the keyword and condition, are the <span class="highlighted">curly brackets</span>. better known as <span class="highlighted">accolades: { }</span>. Any line of code written between the accolades will be <span class="highlighted">looped</span> through when the condition is true.</p>
+						
+						<p>Keep in mind that in order for your code to <span class="highlighted">escape</span> the while loop, you need to <span class="highlighted">adjust</span> the condition within the while loop itself. Otherwise, a so called <span class="highlighted">infinite loop</span> will arise; a loop which will never end. For example:</p>
+						
+						<p class="indent highlighted">while (x < 5) {<br>
+							<span class="indent">i.moveRight();</span><br>
+							<span class="indent">x++;</span><br>
+							}
+						</p>
+						
+						<p>If the code <span class="highlighted">x++;</span> above were to be <span class="highlighted">left out</span>, the value of <span class="highlighted">x</span> would not increase, and therefore result in an <span class="highlighted">infinite loop</span>. Sometimes an infinite loop is <span class="highlighted">desirable</span>. In that case you can use <span class="highlighted">true</span> as the condition, as true is always true. This will create an infinite loop.</p>
+						
+						<p><b>Note 1:</b> Keep in mind that the <span class="highlighted">variable</span> used in the condition needs to be <span class="highlighted">initiated</span> before creating the while loop.</p>
+						
+						<p><b>Exercise:</b> Create a <span class="highlighted">while loop</span> using a variable called <span class="highlighted">x</span>. Use the <span class="highlighted">say()</span> action and the <span class="highlighted">value</span> of x to make i say <span class="highlighted">1 - 10</span>.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Create variable x for the while loop
+
+// Create a while loop using variable x and use the say() action to say the value of x 10 times
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(5)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Make sure you use the right syntax for a while loop. Also, your while loop might be an infinite loop.</p>
+			  </div>
+			</div>
+		
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(5)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(5)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

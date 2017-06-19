@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point todo"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point todo"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point todo"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point todo"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point todo"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text"> 
+						<p><span class="highlighted">Variables</span> are used to hold <span class="highlighted">data values</span>. There are different reasons on why to use them, but the most commonly used reason is to save yourself some time. Let's say we are writing a computer program to calulate all sorts of values with the mathematical number <span class="highlighted">Pi</span> .</p>
+						
+						<p>The value of Pi, showing the first 10 digits, is <span class="highlighted">3.1415926535</span> . Imagine how many times you would have to repeat all these numbers if you have to do 3 or even more calculations using Pi!</p>
+						
+						<p>So, how can we use variables to make our lives easier? It's very simple! All we have to do is <span class="highlighted">tell JavaScript</span> we are <span class="highlighted">creating a variable</span>, <span class="highlighted">give it a name</span> and <span class="highlighted">assign a value</span> to it! Following up on our example of Pi, it would look something like this:</p>
+						
+						<p class="indent highlighted">var pi = 3.1415926535;</p> 
+						
+						The word <span class="highlighted">var</span> tells JavaScript we are creating a variable, and <span class="highlighted">=</span> indicates we are assigning a value to it.</p>
+						
+						<p>Now that we have created a variable, it's important to know how to <span class="highlighted">use</span> it. Supposing we want to tell John the value of Pi, we could write: <span class="highlighted">i.say("3.1415926535");</span> . Using the variable example of pi, however, we could get the <span class="highlighted">same result</span> by writing:</p>
+						
+						<p class="indent highlighted">i.say(pi);</p> 
+						
+						<p>By using the name we gave our variable (<span class="highlighted">pi</span>), the computer understands that we want to tell the value stored inside of it to John!</p>
+						
+						<p>In JavaScript, we can <span class="highlighted">store</span> every form of <span class="highlighted">data values</span> inside a <span class="highlighted">variable</span>. This makes using variables very convenient!</p>
+						
+						<p><b>Note 1:</b> You can also <span class="highlighted">create</span> a variable first, and <span class="highlighted">assign</span> the value later. This would look something like this:</p>
+						
+						<p class="indent highlighted">
+							var name;<br>
+							name = "John";
+						</p>
+						
+						<p><b>Note 2:</b> If you want to <span class="highlighted">combine</span> a variable with a String, you have to add the variable to the String using the <span class="highlighted">+</span> symbol:</p>
+						
+						<p class="indent highlighted">
+							var word = "String";</span><br>
+							i.say("This is a " + word);</span>
+						</p>
+						
+						<p><b>Note 3:</b> Keep in mind that while accessing the value of a variable, you do not use quotation marks to refer to it's name!</p>
+						
+						<p><b>Exercise:</b> Store your <span class="highlighted">name</span> in a variable called myName, and your <span class="highlighted">age</span> in a variable called age. Then, use the <span class="highlighted">say()</span> action to say your name and age in the following format: <span class="highlighted">I am (name) and I am (age) years old.</span> .</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Create variables myName and age, and store your name and age
+
+// Use the say() action to say your name and age
+i.say();</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(4)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Make sure you use the var keyword to create variables. Also, did you use the say function to say your name and age? </p>
+			  </div>
+			</div>
+		
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(4)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(4)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

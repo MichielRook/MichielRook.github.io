@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point done"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point done"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point done"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point done"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point done"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text"> 
+						<p><span class="highlighted">Properties</span> are <span class="highlighted">characteristics of objects</span> in JavaScript. You can compare them with <span class="highlighted">body features</span> of a person. In the sentence <span class="highlighted">"John is a 25 year old man."</span> we can picture a general idea of who John is; his <span class="highlighted">age is 25</span> and his <span class="highlighted">gender is male</span>. The same way we can tell the computer what John's body features are, using properties. For example:</p>
+						
+						<p class="indent highlighted">
+							var john = {<br>
+								<span class="indent">name: "John",</span><br>
+								<span class="indent">age: 25,</span><br>
+								<span class="indent">gender: "male"</span><br>
+							};<br><br>
+							
+							i.say(john.name + " is a " + john.age + " year old " + john.gender + ".");
+						</p>
+						
+						<p>The example above makes the <span class="highlighted">i</span> object say exactly the same sentence we used as an example for John.</p>
+						
+						<p>Properties are often used in <span class="highlighted">situations</span> where you're working with different objects that <span class="highlighted">share a variable</span>, but have <span class="highlighted">different values</span> for those variables. For example, John is 25 years old while Sarah is 23 years old. They both share the variable age but have a different value stored in it. Therefore, age coulb be used as a property, with different values for both John and Sarah.</p>
+						
+						<p><b>Note 1:</b> You can <span class="highlighted">add properties</span> after your <span class="highlighted">first definition</span> of the object. You can do this by creating a <span class="highlighted">new property name</span> and <span class="highlighted">assigning a value</span> to it:</p>
+						
+						<p class="indent highlighted"><i>object</i>.<b>newPropertyName</b> = value ;</p>
+						
+						<p><b>Exercise:</b> Create the <span class="highlighted">name, age and gender properties</span> for <span class="highlighted">Sarah</span>. Then, add a new property: <span class="highlighted">nationality</span>. Lastly, use the <span class="highlighted">say()</span> action to say: <span class="highlighted">"Sarah is a 23 year old British female."</span> .</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Create the properties here
+
+// Add the new property here
+
+// Use say() to say the example senctence				
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(9)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Make sure you specify the object to which the property belongs.</p>
+			  </div>
+			</div>
+		
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(9)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(9)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

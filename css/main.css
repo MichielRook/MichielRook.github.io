@@ -1,0 +1,333 @@
+/* Uiterlijk van de grote blauwe knoppen */
+.platform #continue, .platform #previous, .platform #next, .platform #backToIndex, .editor #runCode {
+	background-color: #0E4C60;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+	font-family: 'Open Sans';
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: 11.111111111111111111111111111111%;
+}
+
+.platform #continue:hover, .platform #previous:hover, .platform #next:hover, .platform #backToIndex:hover, .editor #runCode:hover {
+    background-color: #FFFFFF;
+	color: #000000;
+}
+
+/**************************************************************************************/
+
+
+.navUl {
+	list-style: none;
+	padding-left: 0px;
+	font-size: 0px;
+}
+
+.nav {
+	display: inline-block;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	width: 14.285714285714285714285714285714%;
+	font-size: 15px;
+}
+
+.nav a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 20px 0;
+	font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+	background-color: white;
+	color: black;
+}
+
+.navigation {
+    background-color: #0E4C60;
+    border: 1px solid #ccc;
+}
+
+/**************************************************************************************/
+
+#message {
+	width: 50%;
+	margin: auto;
+	margin-bottom: 1%;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+body {
+	margin: 0;
+	font-family: 'Open Sans';
+}
+
+.platform #continue, .platform #backToIndex{
+	display: block;
+	float: none !important;
+	margin: 1% auto;
+    border: 1px solid #ccc;
+}
+
+.platform #previous, .platform #next {
+	margin-top: 0.5%;
+	display: inline-block;
+	float: none !important;
+    border: 1px solid #ccc;
+}
+
+video {
+	display: block;
+	margin: auto;
+}
+
+.extext {
+	float: right;
+    border: 1px solid #ccc;
+	display: inline-block;
+	height: 750px;
+	width: 30%;
+	background-color: #EBEBEB;
+	text-align: center;
+	color: black;
+	position: relative;
+}
+
+.textdiv {
+	position: absolute;
+	top: 355px;
+	right: 0;
+	text-align: left;
+	padding: 0 0.75%;
+}
+
+.text p {
+	line-height: 1.75em;
+}
+
+.highlighted {
+	background-color: white;
+	padding: 1px;
+	border: 1px solid #ccc;
+	width: 90%;
+}
+
+.indent {
+	margin-left: 4%;
+}
+
+.doubleIndent {
+	margin-left: 8%;
+}
+
+#heightButton {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAErUlEQVR4Xu2agbEMQRCG+0WACBABIkAEiAARIAJEgAgQASJABIgAGRAB9b2aVq2vZ6Znd++KuTdVr07d7e50f/13T8+sEznycXLk/ssZgDMFtAlcEpFvM0NqpcA9EXkpIvdF5NWsEGoA1Hn1e1oIEQBk/zWI+JQQsgqYVgmZGuDFMJUSen2ArwXTKaEHAIenhpABMDWELIBpIYwAmBLCKIDpICwBsATCdRG5KiI0WXwy+Dxv1tgP5d98/hCRjyLyed8t+FIAPQhvReSWiNwuf0v9AARAeN67Ambps8L71gBoQdjUyPIwYADixZbKWAvg0BAULKp4WtSxCvYWAEYgfC9RxAHNda0H1IcbJWUuJr1CEY/WnFlsBaAH4aeIPBw4V6D7fCIiWRBciyKGxxIAROpxIU9e2lFrm4nS80HrWCE4iKGYZgYrxp1RNYwCwMFnZfliwptBZd567wCEuxkCxRZ2q6RGaowAIOpIzY5DQdBlVedGeaiqlibplMgC4GyQyPrB2sz3PhVaNWHJeQLpwOHsOWMAOU9a1dKE75mrOXoAmPhNqc7+QTav35f8y9YEDKfia1eIkvjudcNan1rMdaFcX0s7lAOEKECnt/YAfDJGqm1UdIzXNpVuD0ij6RD5WnuGXosK7MpA0dN8ByZLq1UJ9/HMazWwLQCR7L8Uydse3RaprSDUDEYlD4wzdIUsrzpqEKrpUANQc57IezlBnc2ODlYG3dhY8DWZRsGp1QlVm97Dhgmb7BiCEAGIDCXykfNM7NOEvKzlXBZCTbY4x3w6bB3IQNgB6wHQ5DCB3aaS83xfc+qXi0CvrmQh1J6Tnc/Dwkx8IL3+vO6LAEDfFpKdm5zDWYNG02ELAKxOPpiAqQLAyChCreoMIAvscrIdbSkhym1s82+tUKd1UCHzHUrmeju6KaAXR+1nDYIvgnZpigpcRgm+uus9mSKI80Reewy9lx5jp5lr5WsEgWhT5e0y2FualkKIVoLeXEPOY1ivYOHoFecBEOyGw0eF/CINRkZ2A8VLWytrC4mI05B52dfS6dS+HgCI0mnZdV4dowFBqlpdbR1Y0u/3IPjfbf4TBHoXXw9ae5UUgFZN4DfyH2cxjt2iDlTAclPtwSvyaJ0n0AHa6JLTBIF5bTfYzHk/b08B9nqff/obTvIbmyOrApRDQRwd2T4B8DjvJc987BT91j20YwQAD8A4nPUbjpqTqS1pcHMWgr919OitWwMixyg2OOaLYwsC6tgqHWrz0K5TC4b+U9eoAuzkSMzmfUvqOE+etvb70f1ZJaQlv6YGRAaSf6RE9uCS6FAbKJ5ETKNF9UZRfJc9VMEeljggDUXdOrJGAfY57BRRRLRcjhTB0fOEJcvtX/ZsBUAfSn1A6uRitlB6QAeFsDUAdQZJ64tR1DEK42AQ9gXARxVl6OtxPcHx6UI+M3CeP+pElNu9jnEk5RYtg0MT7OnizSAcSgH74LAJhP8ZgHambIL8SK8O/zuA1RBmALAKwiwAFkOYCcAiCLMBGIYwI4AWhJ3XdrMCiCAMH4vvo3k59DO1WQqdx5iZFaCw2XtEb6tPfz8GAE3VnQE4dFL+a/MdvQJ+A/51N1AIG+vYAAAAAElFTkSuQmCC");
+	background-size: 100%;
+	background-color: transparent;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: none;
+	outline: 0;
+}
+
+#popup {
+	display: none;
+	position: absolute;
+	right: 220px;
+	top: 335px;
+	border: 1px solid black;
+	padding: 3px;
+	color: white;
+	background-color: #0E4C60;
+}
+
+.editor {
+	height: 750px;
+	width: 69.5%;
+	float: left;
+    border: 1px solid #ccc;
+	margin-left: 1px;
+	position: relative;
+}
+
+#runCode {
+	position: absolute;
+	bottom: 1%;
+	right: 0.5%;
+	float: none;
+	padding: 7px 8px !important;
+    border: 1px solid #ccc !important;
+	z-index: 100;
+}
+
+.platform {
+	text-align: center;
+	clear: both;
+}
+
+/**********************************************MODAL CSS*****************************************/
+.modal {
+	text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/************************************************/
+
+body {
+	text-align: center;
+}
+
+.doneDiv {
+	display: inline-block;
+}
+
+table {
+	margin: auto;
+	background-color: #EBEBEB;
+}
+
+table tr > td, th{
+	text-align: left;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+table tr td a {
+	color: #0000EE;
+}
+
+table tr td a:hover {
+	color: #25AFEE;
+}
+
+.whiteRow {
+	background-color: white;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 614px) {
+	.extext {
+		width: 100%;
+	}
+	
+	.editor {
+		width: 100%;
+		margin: 2.5% 0 auto;
+	}
+	
+	.nav {
+		font-size: 7px;
+	}
+	
+	.platform #previous, .platform #next {
+		font-size: 8px;
+	}
+	
+	.text p {
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (min-width: 615px) and (max-width: 759px) {
+	.extext {
+		width: 100%;
+	}
+	
+	.editor {
+		width: 100%;
+		margin: 2.5% 0 auto;
+	}
+	
+	.nav {
+		font-size: 8px;
+	}
+	
+	.platform #previous, .platform #next {
+		font-size: 10px;
+		padding: auto;
+	}
+	
+	.text p {
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (min-width: 760px) and (max-width: 979px) {
+	.extext {
+		width: 29%;
+	}
+	
+	.editor {
+		width: 68.5%;
+	}
+	
+	.nav {
+		font-size: 10px;
+	}
+	
+	.text p {
+		font-size: 0.8em;
+	}
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1200px) {
+	.extext {
+		width: 29.5;
+	}
+	
+	.editor {
+		width: 69%;
+	}
+	
+	.nav {
+		font-size: 12px;
+	}
+	
+	.text p {
+		font-size: 0.9em;
+	}
+}

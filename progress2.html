@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point todo"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point todo"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point todo"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point todo"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point todo"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point todo"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point todo"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+					
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text">
+						<p>In the first course, Syntax, <span class="highlighted">actions</span> were mentioned already. Actions are <span class="highlighted">operations</span> which the <span class="highlighted">object (the main character)</span> can execute. Using an action has the following syntax:</p>
+						
+						<p class="indent highlighted"><i>object</i>.<b>nameOfAction</b>( parameter1, parameter2 );</p>
+						
+						<p>One of the examples we saw before was <span class="highlighted">i.moveTo("John");</span> . <span class="highlighted">moveTo("John")</span> is the action in this example. Let's take a closer look at the structure of this action.</p>
+						
+						<p>moveTo is the <span class="highlighted">name</span> of this action. The name of an action is written <span class="highlighted">without spaces</span> or <span class="highlighted">interpunction</span>. To ensure the name is still <span class="highlighted">readable</span>, we distinguish different words by <span class="highlighted">capitalizing</span> the first letter of a new word. This practise is called <span class="highlighted">camel case</span>, often written like camelCase.</p>
+						
+						<p>As discussed in the first course as well, every action should be followed by <span class="highlighted">parentheses ()</span>. The reason for this is that some actions require <span class="highlighted">additional information</span> in order to be executed properly. This information is called the <span class="highlighted">parameter</span> of an action. Following up on the example of <span class="highlighted">i.moveTo("John");</span>, "John" is the parameter. You are telling the computer that the <span class="highlighted">i</span> object needs to move somewhere, so you need to specify where exactly you want the object to move.</p>
+						
+						<p><b>Note 1:</b> It is not possible, with certain exceptions, to connect multiple actions on one line. For example, <span class="highlighted">i.moveTo("John").greet();</span> would result in the computer returning you an <span class="highlighted">error message</span>.</p>
+						
+						<p><b>Exercise:</b> <span class="highlighted">Translate</span> the following sentences to JavaScript code: <span class="highlighted">I see John</span>, <span class="highlighted">John says "Hi!"</span>, <span class="highlighted">I greet back</span> .</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Put your answers here
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(2)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Make sure you use the right names for the object(s), action(s) and parameter(s).</p>
+			  </div>
+			</div>
+			
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(2)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(2)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

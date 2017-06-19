@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point done"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point done"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point done"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point todo"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point todo"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+					
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text"> 
+						<p>In programming, you sometimes want to take <span class="highlighted">different actions</span> according to the <span class="highlighted">situation</span>. This means that you need to be able to tell the computer to <span class="highlighted">check</span> what the situation is. This can be done by using <span class="highlighted">if statements</span>.</p>
+						
+						<p>An if statement <span class="highlighted">checks</span> whether a condition is <span class="highlighted">true</span> or <span class="highlighted">false</span> (just like the while & for loop). If (see the transition from human language to Javascript?) the <span class="highlighted">condition is true</span>, the <span class="highlighted">code included</span> in the if statement will be <span class="highlighted">executed</span>. Otherwise, this code will be <span class="highlighted">skipped</span>. In general, an if statement looks like this:</p>
+						
+						<p class="indent highlighted">if (<i>condition</i> ) {<br>
+							<span class="indent"><i>// Some code goes here</i></span><br>
+						}
+						</p>
+						
+						<p>In most scenario's, you would like the computer to perform a <span class="highlighted">different action</span> if the condition is <span class="highlighted">false</span>, <span class="highlighted">not skip code</span> entirely. You're offering the computer an <span class="highlighted">alternative</span>, so to speak. This alternative is called the <span class="highlighted">else statement</span>. If we combine this with the if statement, it will look like this:</p>
+						
+						<p class="indent highlighted">if (<i>condition</i> ) {<br>
+							<span class="indent"><i>// The if code goes here</i></span><br>
+						} else {<br>
+							<span class="indent"><i>// The else code goes here</i></span><br>
+						}
+						</p>
+						
+						<p>The above example gives you the oppurtunity to let the computer check for two possible situations. Sometimes, however, you would like the computer to <span class="highlighted">check between more than two situations</span>. You can do this using an <span class="highlighted">else if statement</span>:</p>
+						
+						<p class="indent highlighted">if (<i>condition 1</i> ) {<br>
+							<span class="indent"><i>// Condition 1 is true, code comes here</i></span><br>
+						} else if (<i>condition 2</i> ) {<br>
+							<span class="indent"><i>// Condition 1 is false and condition 2 is true, code comes here</i></span><br>
+						} else {<br>
+							<span class="indent"><i>// Condition 1 and 2 are false, code comes here</i></span><br>
+						}
+						</p>
+						
+						<p>Let's take a look at a comprehensive example. While ordering a pizza, you want to be able to choose between multiple pizzas. We can translate these options to an if statement:</p>
+						
+						<p class="indent highlighted">if (<i>pizzaTonno</i> ) {<br>
+							<span class="indent"><i>// Buy pizza Tonno</i></span><br>
+						} else if (<i>pizzaMozzarella</i> ) {<br>
+							<span class="indent"><i>// Buy pizza Mozzarella</i></span><br>
+						} else if (<i>pizzaHawaii</i> ) {<br>
+							<span class="indent"><i>// Buy pizza Hawaii</i></span><br>
+						} else if (<i>pizzaFunghi</i> ) {<br>
+							<span class="indent"><i>// Buy pizza Funghi</i></span><br>
+						} else {<br>
+							<span class="indent"><i>// Buy pizza Margherita</i></span><br>
+						}
+						</p>
+						
+						<p><b>Note 1:</b> You can use <span class="highlighted">many else if statements</span> if you want to, but using too many will <span class="highlighted">slow down</span> the computer drastically.</p>
+						
+						<p><b>Note 2:</b> Once an (else) if statement equals true, the <span class="highlighted">rest of the statements will not be evaluated</span> anymore. Therefore, keep in mind that the (else) if statements should be <span class="highlighted">sorted by importance</span> in descending order.</p>
+						
+						<p><b>Exercise:</b> Create a variable <span class="highlighted">myName</span> and store your name in it. Then, check if myName is equal to <span class="highlighted">"John"</span>. If it is, use <span class="highlighted">say()</span> to say: <span class="highlighted">"I am John!"</span>. Otherwise, use say() to say: <span class="highlighted">"I am not John!"</span>.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Create variable myName
+
+// Check if myName is equal to "John" and use say() to respond
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(7)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+				<img src="src/checkmark.gif" width="25%">
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Make sure you use the correct syntax for an if statement. Also, make sure you use the right conditions.</p>
+			  </div>
+			</div>
+		
+			<div class="platform">
+				<button id="previous" type="button" onclick="cookieObject.goPrevious(7)">Previous</button>
+				<button id="next"     type="button" onclick="cookieObject.goNext(7)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

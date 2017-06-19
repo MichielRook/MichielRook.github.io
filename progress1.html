@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/cookie.js"></script>
+		
+		<script src="js/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">			
+				<ol class="progress-meter">
+					<li class="progress-point"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point todo"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point todo"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point todo"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point todo"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point todo"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point todo"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point todo"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point todo"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point todo"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+			
+			<div class="extext">
+				<video class="expanded" id="courseVideo" width="100%" height="330px" preload="metadata" controls>
+					<source src="src/Syntax_1_eng.mp4" type="video/mp4">
+				</video>
+				
+				<input id="heightButton" type="button" onclick="changeHeight()">
+				<div id="popup">Hide</div>
+				
+				<div class="textdiv">
+					<div class="text">
+						<p>To start programming, you need to learn the basic <span class="highlighted">rules</span> of how a line of code should be composed. These rules are called <span class="highlighted">Syntax</span>. You can compare syntax with <span class="highlighted">interpunction</span> and <span class="highlighted">word order</span> used in human languages. If you do not use correct syntax, the computer will not understand what you are telling it to do.</p>
+						
+						<p>Look at the following example: <span class="highlighted">Let's eat Grandma.</span>. Because there is a comma missing between the words <span class="highlighted">eat</span> and <span class="highlighted">Grandma</span>, the sentence implies you want to eat Grandma. Most people will know that you're telling Grandma <span class="highlighted">Let's eat</span>, but a computer won't understand this.</p>
+						
+						<p>The transition from English to a programming language like JavaScript is not that hard. Take a look at the following sentence: <span class="highlighted">I move right.</span>. In JavaScript, the equivalent would be: <span class="highlighted">i.moveRight();</span>.</p>
+						
+						<p><span class="highlighted">i</span> is called the <span class="highlighted">object</span> of this example. It's the entity which represents the main character. The object is commonly written with <span class="highlighted">lower-case letters</span>. For convenience, we'll use i as the object throughout the following courses. <span class="highlighted">moveRight()</span> is called the <span class="highlighted">action</span>. It's literally an action, performed by the object. It's important to note the <span class="highlighted">parentheses</span> after the function. Inside these parentheses you would address information the object needs to know in order to perform the action. For example: <span class="highlighted">i.moveTo("John");</span>.</p>
+						
+						<p>We also see interpunction being used. The <span class="highlighted">dot .</span> is used to separate the object from the action. This way, the computer knows what words represent the object and the action. Lastly, we see the <span class="highlighted">semicolon ;</span>. This is used to tell the computer you've finished your sentence. Without it, the computer wouldn't understand where the sentence ends!</p>
+						
+						<p>Lastly, sometimes you want to write some <span class="highlighted">human language</span> in your code, as a <span class="highlighted">reminder</span> or to <span class="highlighted">explain</span> your code to someone else. You can do this by typing <span class="highlighted">//</span> , followed by the text you want to have there. The <span class="highlighted">//</span> tells the computer to <span class="highlighted">not execute</span> this line of code, because it's meant to be a <span class="highlighted">description</span>. These lines are often referred to as <span class="highlighted">comments</span>.</p>
+						
+						<p><b>Exercise:</b> Now it's your turn to try it out! Use the <span class="highlighted">editor</span> to your left to apply the correct <span class="highlighted">syntax</span> to the <span class="highlighted">prefilled text</span>.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="editor">
+				<div id="editor" style="min-height: 750px; margin: 0;">// Complete the following lines of code by adding the correct syntax
+iam('coding')
+i.likeIt;
+iunderstandSyntax
+</div>
+				<script>
+					var editor = ace.edit("editor");
+					
+					editor.setTheme("ace/theme/eclipse");
+					editor.session.setMode("ace/mode/javascript");
+					editor.$blockScrolling = Infinity;
+				</script>
+				<button id="runCode" type="button" onclick="cookieObject.runCode(1)">Run</button>
+			</div>
+			
+			<div id="popupComplete" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Congratulations!</h1>
+				<img src="src/checkmark.gif" width="25%">
+				<p>You have finished this course. Press "Next" to go to the next course.</p>
+			  </div>
+			</div>
+			
+			<div id="popupWrong" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>Oh no!</h1>
+				<p>Your answer is not correct...</p>
+				<img src="src/wrong.png" width="25%">
+				<p><b>Hint:</b> Check if you used the correct components and syntax, such as parentheses and semicolons.</p>
+			  </div>
+			</div>
+			
+			<div class="platform">
+				<button id="next" type="button" onclick="cookieObject.goNext(1)">Next</button>
+			</div>
+		</div>
+	</body>
+</html>

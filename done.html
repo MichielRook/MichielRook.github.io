@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Lerarenplatform - CodeCombat</title>
+		
+		<script src="js/cookie.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/progress.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	</head>
+	
+	<body>
+		<header>
+			<nav>
+				<div class="navigation">
+					<ul class="navUl">
+						<li class="nav">Teacher Dashboard</li>
+						<li class="nav"><a href="#">My Classes</a></li>
+						<li class="nav"><a href="#">Course Guides</a></li>
+						<li class="nav"><a href="#">Student Licenses</a></li>
+						<li class="nav"><a href="#">Resource Hub</a></li>
+						<li class="nav"><a href="#">Educator FAQ</a></li>
+						<li class="nav"><a class="active" href="index.html">Teacher Platform</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div>
+			<div class="container">
+				<ol class="progress-meter">
+					<li class="progress-point done"><a href="progress1.html" onclick="cookieObject.goProg(1, event)">Syntax</a></li>
+					<li class="progress-point done"><a href="progress2.html" onclick="cookieObject.goProg(2, event)">Actions</a></li>
+					<li class="progress-point done"><a href="progress3.html" onclick="cookieObject.goProg(3, event)">Strings</a></li>
+					<li class="progress-point done"><a href="progress4.html" onclick="cookieObject.goProg(4, event)">Variables</a></li>
+					<li class="progress-point done"><a href="progress5.html" onclick="cookieObject.goProg(5, event)">While-loops</a></li>
+					<li class="progress-point done"><a href="progress6.html" onclick="cookieObject.goProg(6, event)">For-loops</a></li>
+					<li class="progress-point done"><a href="progress7.html" onclick="cookieObject.goProg(7, event)">If-statements</a></li>
+					<li class="progress-point done"><a href="progress8.html" onclick="cookieObject.goProg(8, event)">Arrays</a></li>
+					<li class="progress-point done"><a href="progress9.html" onclick="cookieObject.goProg(9, event)">Properties</a></li>
+					<li class="progress-point done"><a href="progress10.html" onclick="cookieObject.goProg(10, event)">Functions</a></li>
+				</ol>
+			</div>
+			
+			<div class="doneDiv">
+				<h1>Well done!</h1>
+				
+				<p>You have finished all courses. You are ready to start teaching your own class now!</p>
+					
+				<p><b>These additional resources might be interesting for you:</b></p>
+						
+				<table>
+					<tr>
+					    <th>File</th>
+					    <th>Description</th>
+					</tr>
+					<tr class="whiteRow">
+						<td><a href="src/guides/ItCS_guide.pdf" download="Introduction to Computer Science Guide">Guide: Introduction to Computer Science</a></td>
+						<td>Solutions and explanation of Introduction to Computer Science.</td>
+					</tr>
+					<tr>
+						<td><a href="src/guides/CS2_guide.pdf" download="Introduction to Computer Science Guide">Guide: Computer Science 2</a></td>
+						<td>Solutions and explanation of Computer Science 2.</td>
+					</tr>
+					<tr class="whiteRow">
+						<td><a href="src/guides/CS3_guide.pdf" download="Introduction to Computer Science Guide">Guide: Computer Science 3</a></td>
+						<td>Solutions and explanation of Computer Science 3.</td>
+					</tr>
+					<tr>
+						<td><a href="src/guides/CS4_guide.pdf" download="Introduction to Computer Science Guide">Guide: Computer Science 4</a></td>
+						<td>Solutions and explanation of Computer Science 4.</td>
+					</tr>
+					<tr class="whiteRow">
+						<td><a href="src/guides/CS5_guide.pdf" download="Introduction to Computer Science Guide">Guide: Computer Science 5</a></td>
+						<td>Solutions and explanation of Computer Science 5.</td>
+					</tr>
+					<tr>
+						<td><a href="src/guides/CS6_guide.pdf" download="Introduction to Computer Science Guide">Guide: Computer Science 6</a></td>
+						<td>Solutions and explanation of Computer Science 6.</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="platform">
+				<button id="backToIndex" type="button" onclick="window.location.href = 'index.html';">Back to start</button>
+			</div>
+		</div>
+	</body>
+</html>
