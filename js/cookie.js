@@ -215,7 +215,7 @@ var cookieObject = {
 		
 		var cont = document.getElementById("continue");
 		
-		name.innerHTML = "Michiel";
+		name.innerHTML = "leraar";
 		
 		switch(progress) {
 			case "1":
